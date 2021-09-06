@@ -1,9 +1,3 @@
-/**
- * Responds to any HTTP request.
- *
- * @param {!express:Request} req HTTP request context.
- * @param {!express:Response} res HTTP response context.
- */
 const {google} = require('googleapis');
 const {GoogleAuth} = require('google-auth-library');
 const {Readable} = require('stream');
@@ -13,9 +7,15 @@ const https = require('https');
 //change this flag if you dont want to share your files
 const shareFile = true;
 //id of the folder, input your folder id over here
-const sharedFolderKey = "CHANGE_THIS_FOLER_KEY_VALUE";
+const sharedFolderKey = "CHANGE_THIS_FOLDER_KEY_VALUE";
 
 
+/**
+ * Responds to any HTTP request.
+ *
+ * @param {!express:Request} req HTTP request context.
+ * @param {!express:Response} res HTTP response context.
+ */
 exports.download = (req, res) => {
     const url = req.query.url ? req.query.url : req.body.url;
     let mimeType = '';
