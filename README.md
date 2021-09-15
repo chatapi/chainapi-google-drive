@@ -14,6 +14,7 @@
  - In runtime service account choose our "GoogleDriveUser", without this step google drive API will not be available for you. Click on "Next" Button
  - leave latest Node.js under runtime, copy past contents of index.js and package.json to the function files
  - change "sharedFolderKey" constant with your folder id, it is text that follows /folders/ text, for example: in "https://drive.google.com/drive/folders/0BxL2BKcYFzUQTDJYV1djOEtnYzg?something=0-WVKid8cJNA2-Nw" folder key is 0BxL2BKcYFzUQTDJYV1djOEtnYzg
+ - change entry point in the upper right corner to the "download"
  - deploy your function
 6) After deployment copy and paste its address into widget
 
