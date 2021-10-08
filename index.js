@@ -17,7 +17,7 @@ const sharedFolderKey = "CHANGE_THIS_FOLDER_KEY_VALUE";
  * @param {!express:Response} res HTTP response context.
  */
 exports.download = (req, res) => {
-    const url = req.query.url ? req.query.url : req.body.url;
+    const url = req.query.fileUrl ? req.query.fileUrl : req.body.fileUrl;
     let mimeType = '';
     let filename = url ? url.split('/') : '';
     filename = filename ? filename[filename.length - 1] : filename;
